@@ -46,7 +46,7 @@ Next, download and install Puppet using the same process:
 	$ ./install.rb
 
 # Configuring Puppet
-<b> this examples was created on ubuntu:14.04, this may need to be changed depenidng on your operating system <b>
+<b> this examples was created on ubuntu:14.04, this may need to be changed depenidng on your operating system </b>
 
 The puppet master contains the configuration data and puppet agents <b>connects via SSL</b> and pulls down the required configurations.
 on most platforms including the one used in this example the <b>configuration is located in /etc/puppet</b> directory. puppet's preinciple configuration file is called <b>puppet.conf</b> and will be automaticly created when you install puppet, if not you can use the following command to create a simple file.
