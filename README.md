@@ -1,7 +1,7 @@
 # puppet-experimental
 a repository to use to learn and practice how to use puppet following the pro puppet book
 
-<link rel="stylesheet" type="text/css" href="https://docs.puppet.com/puppet/latest/reference/type.html">
+<link rel="hello" type="text/css" href="https://docs.puppet.com/puppet/latest/reference/type.html">
 
 <h1> Puppet Resources </h1>
 
