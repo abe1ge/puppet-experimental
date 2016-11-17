@@ -10,12 +10,14 @@ Installing the puppet, puppetmaster, and facter packages will also install some 
 as Ruby itself, if they are not already installed.
 
 <h2> For the latest version of Puppet you can use the following Puppetlabs repositories:</h2>
-•	 Debian Wheezy:
+Debian Wheezy:
+
 	$ wget http://apt.puppetlabs.com/puppetlabs-release-wheezy.deb
 	$ dpkg -i puppetlabs-release-wheezy.deb
 	$ apt-get update
-•	 Ubuntu Precise:
-	
+
+Ubuntu Precise:
+
 	$ wget http://apt.puppetlabs.com/puppetlabs-release-precise.deb
 	$ dpkg -i puppetlabs-release-precise.deb
 	$ apt-get update
