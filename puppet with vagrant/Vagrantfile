@@ -1,0 +1,46 @@
+# -*- mode: ruby -*-
+# # vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+
+	#setting up the synced shared folder
+	config.vm.synced_folder "shared", "/tmp/shared"
+
+	(1..3).each do |i|
+		config.vm.define "agent#{i}" do |agent|
+		
+			# Selecting the box to use
+			agent.vm.box = "chad-thompson/ubuntu-trusty64-gui"
+			
+			#calling the provision bash file
+			agent.vm.provision:shell,path:"bootstrap_base.sh"
+			
+			# Setting up the network options
+			agent.vm.network "public_network", :public_network=> "wlan0",ip:"192.168.1.9#{i}"
+			
+			if i == 1
+				agent.vm.provision:shell,path:"bootstrap_m.sh"
+				agent.vm.hostname = "master.local"
+			else 
+				agent.vm.provision:shell,path:"bootstrap_a.sh"
+				agent.vm.hostname = "agent#{i}.local"
+			end
+			
+			#configuring vm provider options
+			agent.vm.provider "virtualbox" do |agentVM|
+			
+				agentVM.gui = true
+				agentVM.name="PuppetAgent#{i}"
+				
+				#Setting the amount of RAM the VM has access to
+				if i == 1
+					agentVM.memory ="2048"
+				else 
+					agentVM.memory ="4096"
+				end
+				
+				agentVM.cpus ="2"
+			end
+	    end
+	end
+end
