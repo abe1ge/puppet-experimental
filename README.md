@@ -29,4 +29,5 @@ for example to install vim on ubuntu you will use apt-get and centos you use yum
 <h4>The Transactional Layer</h4>
 Puppet’s transactional layer is its engine. 
 The first step Puppet takes is to analyze your configuration and calculate how to apply it to your agent. To do this,
-Puppet creates a graph showing all resources, with their relationships to each other and to each agent. ![alt tag](https://blog.openshift.com/wp-content/uploads/imported/blog-puppet-deps-03.png)
+Puppet creates a graph showing all resources, with their relationships to each other and to each agent. like below
+![alt tag](https://blog.openshift.com/wp-content/uploads/imported/blog-puppet-deps-03.png)
