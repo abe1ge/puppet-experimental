@@ -35,3 +35,4 @@ Puppet creates a graph showing all resources, with their relationships to each o
   <img src="https://blog.openshift.com/wp-content/uploads/imported/blog-puppet-deps-03.png" width="350" hight="400"/>
 </p>
 
+
