@@ -17,4 +17,5 @@ The resource in Listing 1-1 specifies that a package called vim should be instal
  		attribute => value,
 	}
 
-a full list of the types with their attributes <herf here
+a full list of the Resource Type Reference with their attributes <a href="https://docs.puppet.com/puppet/latest/reference/type.html" >here </a>
+
