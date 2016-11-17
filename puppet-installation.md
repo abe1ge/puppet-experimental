@@ -33,7 +33,7 @@ First, download the Facter tarball from the Puppet Labs site
 
 	$ tar -zxf facter-1.6.18.tar.gz
 	$ cd facter-1.6.18
-	./install.rb
+	$ ./install.rb
 This will install Facter into the default path for Ruby libraries on your host, for example /usr/lib/ruby/ on many
 Linux distributions.
 
@@ -43,4 +43,4 @@ Next, download and install Puppet using the same process:
 	$ wget http://downloads.puppetlabs.com/puppet/puppet-3.1.1.tar.gz
 	$ tar -zxf puppet-3.1.1.tar.gz
 	$ cd puppet-3.1.1
-	./install.rb
+	$ ./install.rb
