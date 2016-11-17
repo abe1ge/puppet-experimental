@@ -25,7 +25,7 @@ Replace “precise” with other code names for different versions of Debian and
 
 <h2> Installing from Source </h2>
 
-1. First, download the Facter tarball from the Puppet Labs site:
+First, download the Facter tarball from the Puppet Labs site
 
 	$ cd /tmp
 	$ wget http://downloads.puppetlabs.com/facter/facter-1.6.18.tar.gz
