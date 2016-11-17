@@ -32,7 +32,6 @@ The first step Puppet takes is to analyze your configuration and calculate how t
 Puppet creates a graph showing all resources, with their relationships to each other and to each agent. like below
 
 <p align="center">
-  <img src="https://blog.openshift.com/wp-content/uploads/imported/blog-puppet-deps-03.png" width="350"/>
-  <img src="your_relative_path_here_number_2_large_name" width="350"/>
+  <img src="https://blog.openshift.com/wp-content/uploads/imported/blog-puppet-deps-03.png" width="350" hight="400"/>
 </p>
-![alt tag](https://blog.openshift.com/wp-content/uploads/imported/blog-puppet-deps-03.png)
+
