@@ -101,6 +101,19 @@ Now that we are ready we start the puppet master with  service puppetmaster star
 	$ puppet master --verbose --no-daemonize
 	
 	# --verbose option outputs all the logging and you can also add --debug for more output
+	
+	#All the functionality of Puppet is available from a single binary, puppet, in the style of tools like Git. This means you
+	#can start the Puppet master by running this command:	
+	$ puppet master
+
+	#The agent functionality is also available in the same way:
+	$ puppet agent
+
+	#You can see a full list of the available functionality from the puppet binary by running help:
+	$ puppet help
+
+	And you can get help on any Puppet subcommand by adding the subcommand option:
+	$ puppet help subcommand
 
 <h3> Certificates </h3>
 Starting the daemon will initiate your Puppet environment, create a local Certificate Authority (CA), along with
