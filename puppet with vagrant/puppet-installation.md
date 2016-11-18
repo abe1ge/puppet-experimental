@@ -164,7 +164,7 @@ On the master:
 On the agent:
   	
 	$ rm -f /home/vagrant/.puppet/ssl/certs/agent3.local.pem
-        $puppet agent -t
+	$puppet agent -t
 
 
 
