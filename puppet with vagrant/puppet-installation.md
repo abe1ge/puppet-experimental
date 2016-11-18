@@ -71,8 +71,8 @@ eddit the puppet.conf file to include you fqdn under the main section link so.
 it is also recommended that you create a DNS CNAME for puppet master
 
 	# add the following like like so in /etc/hosts
-	# <master ip>	<master fqdn>	puppetmaster
-	192.168.1.91	master.local	puppetmaster
+	# <master ip>	<master fqdn>	puppet
+	192.168.1.91	master.local	puppet
 	
 now we are going to create and eddit the site.pp file. The site.pp file tells Puppet where and what configuration to load for our clients. This file should be stored under the /etc/puppet/manifests directory. go into the directory and create the file.
 
@@ -124,4 +124,38 @@ The directory on the master contains your CA, certificate requests from your cli
 and certificates for all your clients.
 
 for security reasons you may want change where your certificate is stored and this can be done in the puppet.conf file by changing the ssldir option under main.
+
+<h2> Connecting First Agent </h2>
+
+The first thing you want to do is edit the /etc/hosts file so that puppet can find the master
+
+	#add DNS CNAME of master to master and agents to /etc/hosts
+	sudo sed -i "1i192.168.1.91    master.local    puppet" /etc/hosts
+	
+We will request the our certificate to be signed using the following command. the first time it is run it will output all the step taken to achive this as shown below.
+	
+	#the option --server the name/addres of the puppet master we want to connect to
+	$ sudo puppet agent --test --server=master.local                     
+	Info: Caching certificate for ca
+	Info: csr_attributes file loading from /home/vagrant/.puppet/csr_attributes.yaml
+	Info: Creating a new SSL certificate request for agent2.local
+	Info: Certificate Request fingerprint (SHA256): 
+	08:26:72:04:BC:AD:E8:99:B5:32:38:05:8A:60:C6:72:9B:BD:14:2E:92:9C:F7:19:61:46:62:B3:49:7A:25:01
+	Info: Caching certificate for ca
+	Exiting; no certificate found and waitforcert is disabled
+
+if you do not specifiy the server puppet will look for a host called puppet which is why we specified the masters CNAME in the agents /etc/hosts file. you can also specify the server wihtin puppet agent the same way we did in the puppet masters machine in the file /etc/puppet.conf
+
+now we can go back into the master to sign the certificte. 
+
+	#this will list all the certifictes waiting to be signed
+	$ sudo puppet cert list
+	
+	you can sign the certificte using the following command. you replace agent2.local with the fqdn of agent who sent the request
+	$ sudo puppet cert sign agent2.local
+	
+	
+
+
+
 
