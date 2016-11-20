@@ -32,3 +32,4 @@ we would create our first module using the module generate command.
   alpha-sudo/spec/spec_helper.rb
   alpha-sudo/tests
   alpha-sudo/tests/init.pp
+	
