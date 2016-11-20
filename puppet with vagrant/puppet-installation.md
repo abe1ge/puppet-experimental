@@ -155,6 +155,17 @@ now we can go back into the master to sign the certificte.
 	$ sudo puppet cert sign agent2.local
 	
 	
+There may be some cases that the certificet might not be signed correctly or does not match the nodes privates key then you can follow the following steps to remove all certifiects and then try again.
+
+To fix this, remove the certificate from both the master and the agent and then        start a puppet run, which will automatically regenerate a certficate.
+On the master:
+  	
+	$ puppet cert clean agent3.local
+On the agent:
+  	
+	$ rm -f /home/vagrant/.puppet/ssl/certs/agent3.local.pem
+	$puppet agent -t
+
 
 
 
