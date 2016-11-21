@@ -43,12 +43,12 @@ Vagrant.configure(2) do |config|
 				#EOC
 				
 				# to provision the agents with all things defined in site.pp, useful if you want to puppet to provision
-				#straight away instead of waiting for the default 20 minute
-				config.vm.provision :puppet do |puppet|
-					puppet.manifests_path = "shared/puppet/manifests"
-					puppet.manifest_file = "site.pp"
-					puppet.module_path = "shared/puppet/modules"
-				end
+				# straight away instead of waiting for the default 20 minute
+#				config.vm.provision :puppet do |puppet|
+#					puppet.manifests_path = "shared/puppet/manifests"
+#					puppet.manifest_file = "site.pp"
+#					puppet.module_path = "shared/puppet/modules"
+#				end
 			end
 			
 			
