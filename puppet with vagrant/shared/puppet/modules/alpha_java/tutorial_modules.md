@@ -32,3 +32,10 @@ we would create our first module using the module generate command.
   	alpha-sudo/tests
   	alpha-sudo/tests/init.pp
 	
+<h2> auto creating a module </h2>
+
+to create a module with in puppet can be done using the module generate command. as showen below. this will generate a puppet module and puppulate it 
+
+https://docs.puppet.com/puppet/latest/reference/modules_fundamentals.html#example
+
+	puppet module generate <auther>-<modulename>
