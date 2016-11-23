@@ -34,8 +34,7 @@ we would create our first module using the module generate command.
 	
 <h2> auto creating a module </h2>
 
-to create a module with in puppet can be done using the module generate command. as showen below. this will generate a puppet module and puppulate it 
+Unfortantly for some reason when running this module it doesn't run it probely and i think its because of due to the name, to fix this you can just change the name to remove your name and the dash like so
 
-https://docs.puppet.com/puppet/latest/reference/modules_fundamentals.html#example
-
-	puppet module generate <auther>-<modulename>
+	$ sudo mv -r alpha-sudo sudo 
+	# you can test puppet is able to run the module by doning the following
