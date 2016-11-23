@@ -38,3 +38,6 @@ Unfortantly for some reason when running this module it doesn't run it probely a
 
 	$ sudo mv -r alpha-sudo sudo 
 	# you can test puppet is able to run the module by doning the following
+	
+	$ sudo puppet apply sudo/manifests/site.pp
+	
