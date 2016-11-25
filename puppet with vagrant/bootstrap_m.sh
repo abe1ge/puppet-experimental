@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 echo "master bootstrap"
 #update
-#sudo apt-get update
+sudo apt-get update
 
 #install puppet
 sudo apt-get install -y puppet puppetmaster 

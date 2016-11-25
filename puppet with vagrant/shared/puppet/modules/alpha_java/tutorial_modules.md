@@ -32,3 +32,12 @@ we would create our first module using the module generate command.
   	alpha-sudo/tests
   	alpha-sudo/tests/init.pp
 	
+<h2> auto creating a module </h2>
+
+Unfortantly for some reason when running this module it doesn't run it probely and i think its because of due to the name, to fix this you can just change the name to remove your name and the dash like so
+
+	$ sudo mv -r alpha-sudo sudo 
+	# you can test puppet is able to run the module by doning the following
+	
+	$ sudo puppet apply sudo/manifests/site.pp
+	
