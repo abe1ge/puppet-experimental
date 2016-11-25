@@ -1,0 +1,28 @@
+Testing Results (As of Wednesday 15:38):
+
+
+Artifactory - Installed, needs Service {'artifactory':} command
+
+Broccoli - Working
+
+Elasticsearch - Working
+
+Gatling - Working
+
+Git - Working
+
+Java - Working
+
+Jenkins - Working on port 8080
+
+Kibana - Working on port 5601
+
+Logstash - Working
+
+Mercurial - Working
+
+Mercurial Server - Working on port 8000
+
+Mocha - Working
+
+Rundeck - Working on port 4440

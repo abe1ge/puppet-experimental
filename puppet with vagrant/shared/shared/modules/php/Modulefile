@@ -1,0 +1,11 @@
+name    'tatfb-php'
+version '0.1.0'
+source 'UNKNOWN'
+author 'tatfb'
+license 'Apache License, Version 2.0'
+summary 'installing php for the lamp package'
+description 'PHP is the component of our setup that will process code to display dynamic content. It can run scripts, connect to our MySQL databases to get information, and hand the processed content over to our web server to display.'
+project_page 'tutorial from https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04'
+
+## Add dependencies, if any:
+# dependency 'username/name', '>= 1.2.0'

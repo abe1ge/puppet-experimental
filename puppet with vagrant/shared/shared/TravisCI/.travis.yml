@@ -1,0 +1,6 @@
+language: java
+jdk:
+ - oraclejdk8
+ - oraclejdk7
+
+script: [Insert any commands here, such as "java Main"]
