@@ -22,6 +22,9 @@ Vagrant.configure(2) do |config|
 			if i ==1
 				config.vm.provision "master", type: "shell", path:"bootstrap_m.sh"
 				config.vm.hostname = "master.local"
+				
+				#forward port from guest to host, this one can be used for jenkins
+				config.vm.network "forwarded_port", guest: 80, hosst: 8080
 
 			else
 				config.vm.hostname = "agent#{i}.local"
